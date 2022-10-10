@@ -1,0 +1,63 @@
+/*
+// 1. General
+*/
+
+
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+body {
+    font-family: $font-primary;
+    color: $dark;
+    background: $body-bg;
+    font-weight: 500;
+}
+p {
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-secondary;
+    font-weight: 700;
+}
+
+.navbar {
+    background-color: #FFF;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.error-message {
+    background-color: #FF0000;
+    padding: 5px 10px;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #4CE5B1;
+    padding: 5px 10px;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+
+.error-message {
+    display: inline-block;
+}
+
+.success-message {
+    display: inline-block;
+}
+
+.error-input {
+    border: 1px solid #FF0000 !important;
+}
