@@ -122,6 +122,7 @@
                       <label for="contactName">Name*</label>
                       <input
                         name="name"
+                        id="name"
                         type="text"
                         class="form-control"
                         placeholder="Name..."
@@ -133,6 +134,7 @@
                       <label for="contactEmail">E-mail address*</label>
                       <input
                         name="email"
+                        id="email"
                         type="email"
                         class="form-control"
                         placeholder="E-mail address..."
@@ -144,6 +146,7 @@
                       <label for="contactPhone">Phone*</label>
                       <input
                         name="contactPhone"
+                        id="phone"
                         type="text"
                         class="form-control"
                         placeholder="Phone number..."
@@ -157,6 +160,7 @@
                       <label for="contactMessage">Message*</label>
                       <textarea
                         name="comments"
+                        id="comments"
                         rows="4"
                         class="form-control"
                         placeholder="Message..."
@@ -166,7 +170,11 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <button type="submit" class="btn btn-primary">
+                    <button
+                      type="submit"
+                      onclick="onSubmitContactForm()"
+                      class="btn btn-primary"
+                    >
                       Validate
                     </button>
                     <div id="simple-msg"></div>
@@ -174,8 +182,10 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-12">
-                    <div class="error-message">Invalid</div>
-                    <div class="success-message">Valid</div>
+                    <div class="error-message" id="error-message">Invalid</div>
+                    <div class="success-message" id="success-message">
+                      Valid
+                    </div>
                   </div>
                 </div>
               </div>
