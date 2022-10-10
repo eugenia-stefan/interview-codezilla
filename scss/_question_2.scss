@@ -1,12 +1,36 @@
+$mobile-breakpoint: 600px;
+
 .q2-wrapper {
-    background: #EFEFEF;
+  background: #efefef;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  justify-items: center;
 
-    .q2-block {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        background: #333;
+  @media (max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /**
+    * Added this to comply with the following requirement since there are 6 boxes not 5
+    * "On mobile, align them 2 on the first row, 2 on the second row and one on the last row."
+    */
+    .q2-block:nth-last-child(1) {
+      display: none;
     }
+  }
 
-    /* Add your code after this line */
+  .q2-block {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: #333;
+  }
+
+  .q2-block:nth-child(odd) {
+    background-color: #00ff00;
+  }
+
+  /* Add your code after this line */
 }
